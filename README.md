@@ -28,5 +28,3 @@ In the end it will parse and display the data coming from the serial connexion c
 ### off.py
 
 This one is the most interesting one as it will use Python subprocess module to get the PID of any script used to display information on the LCD screen, provided it starts with the "display" characters string, terminate it nicely then, clear and turn off the LCD screen.
-
-![Picture of the Pi, the Arduino and the DHT11 in action](https://github.com/t0m-a/LCD_py/raw/master/src/common/images/pi.jpg "Arduino, Pi and DHT11")
