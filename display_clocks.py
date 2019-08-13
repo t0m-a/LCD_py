@@ -19,6 +19,7 @@ ser = serial.Serial(
         bytesize=serial.EIGHTBITS,
         timeout=1
 )
+ser.flushInput()
 
 while True:
 
@@ -27,9 +28,13 @@ while True:
 	paris = timezone('Europe/Paris')
 	paris_time = datetime.now(paris)
 
-	x=ser.readline().decode().strip()
+	y=ser.readline().decode().strip()
+	temp = (y.strip().replace(","," ")).split(' ')[0]
+	hum = (y.strip().replace(","," ")).split(' ')[0-1]
+	Temperature = str(temp)
+	Humidity = str(hum)
 
 	mylcd.lcd_display_string("Local : %s" %time.strftime("%H:%M:%S"), 1)
 	mylcd.lcd_display_string("Paris : %s" %paris_time.strftime("%H:%M:%S"), 2)
 	mylcd.lcd_display_string("Sydney: %s" %sydney_time.strftime("%H:%M:%S"), 3)
-	mylcd.lcd_display_string(x, 4)
+	mylcd.lcd_display_string_2("Tc = " + Temperature, " H% = " + Humidity, 4)
