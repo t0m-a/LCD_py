@@ -28,3 +28,10 @@ In the end it will parse and display the data coming from the serial connexion c
 ### off.py
 
 This one is the most interesting one as it will use Python subprocess module to get the PID of any script used to display information on the LCD screen, provided it starts with the "display" characters string, terminate it nicely then, clear and turn off the LCD screen.
+
+## Screenshots
+
+![LCDpy photo](https://66.media.tumblr.com/3ea0e7ae11f3d5173894707cdcecff2f/tumblr_pvkvd59sKY1ysf8uoo2_1280.jpg "LCDpy")
+
+![LCDpy photo](https://66.media.tumblr.com/4f617df9baefd8fe9a212dfd191ac116/tumblr_pwp8hsjBL81ysf8uoo1_1280.jpg "LCDpy")
+
